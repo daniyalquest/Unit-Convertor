@@ -26,29 +26,35 @@ if option == 'Length':
     conversion = st.selectbox('Select conversion:', ('Meters to Feet', 'Feet to Meters'))
     if conversion == 'Meters to Feet':
         value = st.number_input('Enter value in meters:', value=0.0, key='meters')
-        result = meters_to_feet(value)
-        st.write(f'{value} meters is equal to {result:.2f} feet')
+        if st.button('Calculate'):
+            result = meters_to_feet(value)
+            st.write(f'{value} meters is equal to {result:.2f} feet')
     else:
         value = st.number_input('Enter value in feet:', value=0.0, key='feet')
-        result = feet_to_meters(value)
-        st.write(f'{value} feet is equal to {result:.2f} meters')
+        if st.button('Calculate'):
+            result = feet_to_meters(value)
+            st.write(f'{value} feet is equal to {result:.2f} meters')
 elif option == 'Area':
     conversion = st.selectbox('Select conversion:', ('Square Meters to Square Feet', 'Square Feet to Square Meters'))
     if conversion == 'Square Meters to Square Feet':
         value = st.number_input('Enter value in square meters:', value=0.0, key='sq_meters')
-        result = sq_meters_to_sq_feet(value)
-        st.write(f'{value} square meters is equal to {result:.2f} square feet')
+        if st.button('Calculate'):
+            result = sq_meters_to_sq_feet(value)
+            st.write(f'{value} square meters is equal to {result:.2f} square feet')
     else:
         value = st.number_input('Enter value in square feet:', value=0.0, key='sq_feet')
-        result = sq_feet_to_sq_meters(value)
-        st.write(f'{value} square feet is equal to {result:.2f} square meters')
+        if st.button('Calculate'):
+            result = sq_feet_to_sq_meters(value)
+            st.write(f'{value} square feet is equal to {result:.2f} square meters')
 elif option == 'Digital Storage':
     conversion = st.selectbox('Select conversion:', ('Gigabytes to Megabytes', 'Megabytes to Gigabytes'))
     if conversion == 'Gigabytes to Megabytes':
         value = st.number_input('Enter value in gigabytes:', value=0.0, key='gb')
-        result = gb_to_mb(value)
-        st.write(f'{value} gigabytes is equal to {result:.2f} megabytes')
+        if st.button('Calculate'):
+            result = gb_to_mb(value)
+            st.write(f'{value} gigabytes is equal to {result:.2f} megabytes')
     else:
         value = st.number_input('Enter value in megabytes:', value=0.0, key='mb')
-        result = mb_to_gb(value)
-        st.write(f'{value} megabytes is equal to {result:.2f} gigabytes')
+        if st.button('Calculate'):
+            result = mb_to_gb(value)
+            st.write(f'{value} megabytes is equal to {result:.2f} gigabytes')
